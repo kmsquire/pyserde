@@ -217,6 +217,9 @@ def serialize(
             if typ is cls or (is_primitive(typ) and not is_enum(typ)):
                 continue
             g[typename(typ)] = typ
+            print(typename(typ), type(typ))
+        print(typename(List[str]))
+        print(typename(List))
 
         # render all union functions
         for union in iter_unions(cls):
